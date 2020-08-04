@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const token = 'NzM4MjcxMzg1MjMwNjM5MjE2.XyJezg.iJAdM_3Rcxe1wPxjVkTldEWz3OY';
+
 const prefix = "[";
 
 var version = ' 1.0';
@@ -21,7 +21,7 @@ client.once('ready', () =>{
     client.user.setActivity('Beyond Infinity', {type: 'LISTENING'}).catch(console.error);
     
 });
-
+client.login(process.env.token);
 
 client.on('message', message=>  {
 
@@ -200,4 +200,3 @@ switch(args[0]){
     }          
 })
 
-client.login(token);
