@@ -28,36 +28,19 @@ client.on('message', message=>  {
 
 
 // rpg hunt
-
     if(message.content === 'rpg hunt'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG HUNT** is ready!');
                 }, 60000); 
- } else if (message.content === 'Rpg hunt'){
-        message.react('🚩');
-        setTimeout(function(){
-            message.reply('**RPG HUNT** is ready!');
-                }, 60000); }
+ } 
 // rpg adventure
     if(message.content === 'rpg adventure'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG ADVENTURE** is ready!');
                 }, 360000);
-} else if (message.content === 'Rpg adventure'){
-        message.react('🚩');
-        setTimeout(function(){
-            message.reply('**RPG ADVENTURE** is ready!');
-                }, 360000);
-}
-// rpg adv 
-    if(message.content === 'rpg adv'){
-        message.react('🚩');
-        setTimeout(function(){
-            message.reply('**RPG ADVENTURE** is ready!');
-                }, 360000);
-} else if (message.content === 'Rpg adv'){
+} else if (message.content === 'rpg adv'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG ADVENTURE** is ready!');
@@ -69,30 +52,116 @@ client.on('message', message=>  {
         setTimeout(function(){
             message.reply('**RPG TRAINING** is ready!');
             }, 900000);
-} else if(message.content === 'Rpg training'){
+} else if(message.content === 'rpg tr'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG TRAINING** is ready!');
             }, 900000);
 }
-// rpg tr
-    if(message.content === 'rpg tr'){
+// rpg chop 
+    if(message.content === 'rpg chop'){
         message.react('🚩');
         setTimeout(function(){
-            message.reply('**RPG TRAINING** is ready!');
-            }, 900000);
-} else if (message.content === 'Rpg tr'){
-        message.react('🚩');
-        setTimeout(function(){
-            message.reply('**RPG TRAINING** is ready!');
-            }, 900000);
+            message.reply('**CHOP** is ready!');
+            }, 300000);
 }
-// rpg chop | fish etc
-    if(message.content === 'rpg chop'|'rpg ladder'){
-        message.react('🚩');
-        setTimeout(function(){
-            message.reply('**** is ready!');
-            }, 5000);
+// rpg fish
+if(message.content === 'rpg fish'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**FISH** is ready!');
+        }, 300000);
+}
+// rpg axe
+if(message.content === 'rpg axe'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**AXE** is ready!');
+        }, 300000);
+}
+// rpg net
+if(message.content === 'rpg net'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**NET** is ready!');
+        }, 300000);
+}
+// rpg pickup
+if(message.content === 'rpg pickup'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**PICKUP** is ready!');
+        }, 300000);
+}
+// rpg ladder
+if(message.content === 'rpg ladder'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**LADDER** is ready!');
+        }, 300000);
+}
+// rpg mine
+if(message.content === 'rpg mine'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**MINE** is ready!');
+        }, 300000);
+}
+// rpg bowsaw
+if(message.content === 'rpg bowsaw'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**BOWSAW** is ready!');
+        }, 300000);
+}
+// rpg boat
+if(message.content === 'rpg boat'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**BOAT** is ready!');
+        }, 300000);
+}
+// rpg pickaxe
+if(message.content === 'rpg pickaxe'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**PICKAXE** is ready!');
+        }, 300000);
+}
+// rpg tractor
+if(message.content === 'rpg tractor'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**TRACTOR** is ready!');
+        }, 300000);
+}
+// rpg chainsaw
+if(message.content === 'rpg chainsaw'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**CHAINSAW** is ready!');
+        }, 300000);
+}
+// rpg bigboat
+if(message.content === 'rpg bigboat'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**BIGBOAT** is ready!');
+        }, 300000);
+}
+// rpg drill
+if(message.content === 'rpg drill'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**DRILL** is ready!');
+        }, 300000);
+}
+// rpg dynamite
+if(message.content === 'rpg dynamite'){
+    message.react('🚩');
+    setTimeout(function(){
+        message.reply('**DYNAMITE** is ready!');
+        }, 300000);
 }
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -136,7 +205,7 @@ if(command === 'event'){
     message.channel.send(eventembed);
     }
     if(command === "updates"){
-        message.channel.send('There are currently no songs from Genji#3053. Either he has not finished the project or uploaded it.')
+        message.channel.send('There are currently no updates from Genji#3053. Either he has not finished the project or uploaded it.')
     }
 //commands
 
@@ -199,4 +268,3 @@ switch(args[0]){
 //dont change below
     }          
 })
-
