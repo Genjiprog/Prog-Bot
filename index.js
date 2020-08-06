@@ -46,7 +46,7 @@ client.on('message', message=>  {
 
 
 // rpg hunt
-    if(message.content.toLocaleLowerCase === 'rpg hunt'){
+    if(message.content === 'rpg hunt'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG HUNT** is ready!');
