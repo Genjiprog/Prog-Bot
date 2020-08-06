@@ -17,7 +17,7 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 
-const commandCooldown = new set();
+
 
 client.once('ready', () =>{
     console.log('Prog Bot is online!');
@@ -46,11 +46,11 @@ client.on('message', message=>  {
 
 if(!message.content.startsWith(rpg) || message.author.bot) return;
 
-    const args = message.content.slice(rpg.length).split(/ +/);
-    const command = args.shift().toLowerCase();
+    const rpgargs = message.content.slice(rpg.length).split(/ +/);
+    const rpgcommand = rpgargs.shift().toLowerCase();
 
 // rpg hunt
-    if(message.content === 'hunt'){
+    if(rpgcommand === 'hunt'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG HUNT** is ready!');
