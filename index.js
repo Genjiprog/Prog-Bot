@@ -23,27 +23,10 @@ client.once('ready', () =>{
     client.user.setActivity('Beyond Infinity', {type: 'LISTENING'}).catch(console.error);
     
 });
+
 client.login(process.env.token);
 
 client.on('message', message=>  {
-
-    switch(args[0]){
-    
-        case "clear":
-            if(message.member.roles.cache.has('701025360128507945')){
-                if(!args[1]) return message.reply('Error | please specify how many messages you want to delete ```including this message```')
-                message.channel.bulkDelete(args[1]);
-            
-            } else {
-            message.channel.send('No, lemao');
-        } 
-        break;
-        
-        
-    
-} 
-
-
 
 // rpg hunt
     if(message.content === 'rpg hunt'){
@@ -53,7 +36,7 @@ client.on('message', message=>  {
                 }, 60000); 
  } 
 // rpg adventure
-    if(message.content === 'adventure'){
+    if(message.content === 'rpg adventure'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG ADVENTURE** is ready!');
@@ -65,117 +48,117 @@ client.on('message', message=>  {
                 }, 360000);
 }
 // rpg training
-    if(message.content === 'training'){
+    if(message.content === 'rpg training'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG TRAINING** is ready!');
             }, 900000);
-} else if(message.content === 'tr'){
+} else if(message.content === 'rpg tr'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG TRAINING** is ready!');
             }, 900000);
 }
 // rpg chop 
-    if(message.content === 'chop'){
+    if(message.content === 'rpg chop'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**CHOP** is ready!');
             }, 300000);
 }
 // rpg fish
-if(message.content === 'fish'){
+if(message.content === 'rpg fish'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**FISH** is ready!');
         }, 300000);
 }
 // rpg axe
-if(message.content === 'axe'){
+if(message.content === 'rpg axe'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**AXE** is ready!');
         }, 300000);
 }
 // rpg net
-if(message.content === 'net'){
+if(message.content === 'rpg net'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**NET** is ready!');
         }, 300000);
 }
 // rpg pickup
-if(message.content === 'pickup'){
+if(message.content === 'rpg pickup'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**PICKUP** is ready!');
         }, 300000);
 }
 // rpg ladder
-if(message.content === 'ladder'){
+if(message.content === 'rpg ladder'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**LADDER** is ready!');
         }, 300000);
 }
 // rpg mine
-if(message.content === 'mine'){
+if(message.content === 'rpg mine'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**MINE** is ready!');
         }, 300000);
 }
 // rpg bowsaw
-if(message.content === 'bowsaw'){
+if(message.content === 'rpg bowsaw'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**BOWSAW** is ready!');
         }, 300000);
 }
 // rpg boat
-if(message.content === 'boat'){
+if(message.content === 'rpg boat'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**BOAT** is ready!');
         }, 300000);
 }
 // rpg pickaxe
-if(message.content === 'pickaxe'){
+if(message.content === 'rpg pickaxe'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**PICKAXE** is ready!');
         }, 300000);
 }
 // rpg tractor
-if(message.content === 'tractor'){
+if(message.content === 'rpg tractor'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**TRACTOR** is ready!');
         }, 300000);
 }
 // rpg chainsaw
-if(message.content === 'chainsaw'){
+if(message.content === 'rpg chainsaw'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**CHAINSAW** is ready!');
         }, 300000);
 }
 // rpg bigboat
-if(message.content === 'bigboat'){
+if(message.content === 'rpg bigboat'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**BIGBOAT** is ready!');
         }, 300000);
 }
 // rpg drill
-if(message.content === 'drill'){
+if(message.content === 'rpg drill'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**DRILL** is ready!');
         }, 300000);
 }
 // rpg dynamite
-if(message.content === 'dynamite'){
+if(message.content === 'rpg dynamite'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**DYNAMITE** is ready!');
