@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const prefix = "[";
+const rpg = "rpg ";
 
 var version = ' 1.0';
 
@@ -16,6 +17,8 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 
+const commandCooldown = new set();
+
 client.once('ready', () =>{
     console.log('Prog Bot is online!');
     client.user.setActivity('Beyond Infinity', {type: 'LISTENING'}).catch(console.error);
@@ -25,139 +28,158 @@ client.login(process.env.token);
 
 client.on('message', message=>  {
 
+    switch(args[0]){
+    
+        case "clear":
+            if(message.member.roles.cache.has('701025360128507945')){
+                if(!args[1]) return message.reply('Error | please specify how many messages you want to delete ```including this message```')
+                message.channel.bulkDelete(args[1]);
+            
+            } else {
+            message.channel.send('No, lemao');
+        } 
+        break;
+        
+        
+    
+} 
 
+if(!message.content.startsWith(rpg) || message.author.bot) return;
+
+    const args = message.content.slice(rpg.length).split(/ +/);
+    const command = args.shift().toLowerCase();
 
 // rpg hunt
-    if(message.content === 'rpg hunt'){
+    if(message.content === 'hunt'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG HUNT** is ready!');
                 }, 60000); 
  } 
 // rpg adventure
-    if(message.content === 'rpg adventure'){
+    if(message.content === 'adventure'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG ADVENTURE** is ready!');
                 }, 360000);
-} else if (message.content === 'rpg adv'){
+} else if (message.content === 'adv'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG ADVENTURE** is ready!');
                 }, 360000);
 }
 // rpg training
-    if(message.content === 'rpg training'){
+    if(message.content === 'training'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG TRAINING** is ready!');
             }, 900000);
-} else if(message.content === 'rpg tr'){
+} else if(message.content === 'tr'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG TRAINING** is ready!');
             }, 900000);
 }
 // rpg chop 
-    if(message.content === 'rpg chop'){
+    if(message.content === 'chop'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**CHOP** is ready!');
             }, 300000);
 }
 // rpg fish
-if(message.content === 'rpg fish'){
+if(message.content === 'fish'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**FISH** is ready!');
         }, 300000);
 }
 // rpg axe
-if(message.content === 'rpg axe'){
+if(message.content === 'axe'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**AXE** is ready!');
         }, 300000);
 }
 // rpg net
-if(message.content === 'rpg net'){
+if(message.content === 'net'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**NET** is ready!');
         }, 300000);
 }
 // rpg pickup
-if(message.content === 'rpg pickup'){
+if(message.content === 'pickup'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**PICKUP** is ready!');
         }, 300000);
 }
 // rpg ladder
-if(message.content === 'rpg ladder'){
+if(message.content === 'ladder'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**LADDER** is ready!');
         }, 300000);
 }
 // rpg mine
-if(message.content === 'rpg mine'){
+if(message.content === 'mine'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**MINE** is ready!');
         }, 300000);
 }
 // rpg bowsaw
-if(message.content === 'rpg bowsaw'){
+if(message.content === 'bowsaw'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**BOWSAW** is ready!');
         }, 300000);
 }
 // rpg boat
-if(message.content === 'rpg boat'){
+if(message.content === 'boat'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**BOAT** is ready!');
         }, 300000);
 }
 // rpg pickaxe
-if(message.content === 'rpg pickaxe'){
+if(message.content === 'pickaxe'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**PICKAXE** is ready!');
         }, 300000);
 }
 // rpg tractor
-if(message.content === 'rpg tractor'){
+if(message.content === 'tractor'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**TRACTOR** is ready!');
         }, 300000);
 }
 // rpg chainsaw
-if(message.content === 'rpg chainsaw'){
+if(message.content === 'chainsaw'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**CHAINSAW** is ready!');
         }, 300000);
 }
 // rpg bigboat
-if(message.content === 'rpg bigboat'){
+if(message.content === 'bigboat'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**BIGBOAT** is ready!');
         }, 300000);
 }
 // rpg drill
-if(message.content === 'rpg drill'){
+if(message.content === 'drill'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**DRILL** is ready!');
         }, 300000);
 }
 // rpg dynamite
-if(message.content === 'rpg dynamite'){
+if(message.content === 'dynamite'){
     message.react('🚩');
     setTimeout(function(){
         message.reply('**DYNAMITE** is ready!');
@@ -219,17 +241,9 @@ if(command === 'event'){
 }}
 //support the bot command (3)| supportbot.js
     if(command === 'socials'){
-        const socialsembed = new Discord.MessageEmbed()
-        .setThumbnail('https://cdn.discordapp.com/avatars/537961171089620994/259a07be397a53ad40d659815b92474a.webp')
-        .setTitle("Genji's Socials")
-        .addField("Discord", 'https://discord.gg/xwhEqu5')
-        .addField("Youtube", 'https://www.youtube.com/channel/UCa9Aff8iXVxfwza09oyczwQ')
-        .addField("Instagram", 'https://www.instagram.com/genjiprog https://www.instagram.com/juanazrielmusic')
-        .addField("Feel like supporting this bot? Anything helps", 'https://www.paypal.me/genjiprog')
-        .setColor(0x28B463)
-        .setFooter('Verified | 30/07/2020')
-        message.channel.send(socialsembed);
+        client.commands.get('socials').execute(message, args)
     }
+        
     if(command === 'donate'){
         const donateembed = new Discord.MessageEmbed()
         .setThumbnail('https://f4.bcbits.com/img/a1723011251_10.jpg')
@@ -253,18 +267,6 @@ if(command === 'event'){
         message.channel.send(patreonembed);
 }
 
-switch(args[0]){
-    
-    case "clear":
-        if(message.member.roles.cache.has('701025360128507945')){
-            if(!args[1]) return message.reply('Error | please specify how many messages you want to delete ```including this message```')
-            message.channel.bulkDelete(args[1]);
-        
-        } else {
-        message.channel.send('No, lemao');
-    }
-
-
-//dont change below
-    }          
+  
+//dont change below       
 })
