@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const prefix = "[";
-const rpg = "rpg ";
 
 var version = ' 1.0';
 
@@ -44,13 +43,10 @@ client.on('message', message=>  {
     
 } 
 
-if(!message.content.startsWith(rpg) || message.author.bot) return;
 
-    const rpgargs = message.content.slice(rpg.length).split(/ +/);
-    const rpgcommand = rpgargs.shift().toLowerCase();
 
 // rpg hunt
-    if(rpgcommand === 'hunt'){
+    if(message.content.toLocaleLowerCase === 'rpg hunt'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG HUNT** is ready!');
