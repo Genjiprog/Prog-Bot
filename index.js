@@ -206,7 +206,7 @@ if(command === 'event'){
     message.channel.send(eventembed);
     }
     if(command === "updates"){
-        message.channel.send('There are currently no updates from Genji#3053. Either he has not finished the project or uploaded it.')
+        message.channel.send('There are currently no updates from Genji#3053. Either he has not finished the update or uploaded it.')
     }
 //commands
 
