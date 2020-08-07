@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 const prefix = "[";
 
-var version = ' 1.0';
+var version = ' 1.1.1';
 
 const fs = require('fs');
 
@@ -29,7 +29,7 @@ client.login(process.env.token);
 client.on('message', message=>  {
 
 // rpg hunt
-    if(message.content === 'rpg hunt'){
+    if(command.toLowerCase === 'rpg hunt'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG HUNT** is ready!');
@@ -218,11 +218,13 @@ if(command === 'event'){
     } else {
     message.channel.send('No, lemao');
 }}
-//support the bot command (3)| supportbot.js
+//bot profile (2) | +
     if(command === 'socials'){
         client.commands.get('socials').execute(message, args)
     }
-        
+    if(command === 'invite'){
+        client.commands.get('invite').execute(message, args)
+    }
     if(command === 'donate'){
         const donateembed = new Discord.MessageEmbed()
         .setThumbnail('https://f4.bcbits.com/img/a1723011251_10.jpg')

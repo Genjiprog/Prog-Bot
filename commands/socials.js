@@ -13,6 +13,4 @@ module.exports = {
         .setFooter('Verified | 30/07/2020')
         message.channel.send(socialsembed);
     }
-
-
 }
