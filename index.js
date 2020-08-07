@@ -29,7 +29,7 @@ client.login(process.env.token);
 client.on('message', message=>  {
 
 // rpg hunt
-    if(command === 'rpg hunt'){
+    if(message.content === 'rpg hunt'){
         message.react('🚩');
         setTimeout(function(){
             message.reply('**RPG HUNT** is ready!');
