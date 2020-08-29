@@ -169,8 +169,28 @@ if(message.content.toLowerCase().includes("IT'S RAINING COINS"))
     message.channel.send("Key Word Detected ");
 else {
     for(var i = 0; i < message.embeds.length; i++) {
-        if(message.embeds[i].title.includes("Prog | Information") || message.embeds[i].title.includes("Prog | Information")) {
+        if(message.embeds[i].title.includes("IT'S RAINING COINS") || message.embeds[i].title.includes("IT'S RAINING COINS")) {
             message.channel.send("<@&749082133393440788>");
+            break;
+    }
+}}
+//Event ping Fish
+if(message.content.toLowerCase().includes("A MEGALODON HAS SPAWNED IN THE RIVER"))
+    message.channel.send("Key Word Detected ");
+else {
+    for(var i = 0; i < message.embeds.length; i++) {
+        if(message.embeds[i].title.includes("A MEGALODON HAS SPAWNED IN THE RIVER") || message.embeds[i].title.includes("A MEGALODON HAS SPAWNED IN THE RIVER")) {
+            message.channel.send("<@&749082214851149974>");
+            break;
+    }
+}}
+//Event ping Chop
+if(message.content.toLowerCase().includes("AN EPIC TREE HAS JUST GROWN"))
+    message.channel.send("Key Word Detected ");
+else {
+    for(var i = 0; i < message.embeds.length; i++) {
+        if(message.embeds[i].title.includes("AN EPIC TREE HAS JUST GROWN") || message.embeds[i].title.includes("AN EPIC TREE HAS JUST GROWN")) {
+            message.channel.send("<@&749082259054788698>");
             break;
     }
 }}
