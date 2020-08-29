@@ -220,14 +220,6 @@ if(command === 'event'){
     }
 //commands
 
-    if(command === "clear"){
-    if(message.member.roles.cache.has('701025360128507945')){
-        if(!args[0]) return message.reply('Error | please specify how many messages you want to delete')
-        message.channel.bulkDelete(args[0]);
-    
-    } else {
-    message.channel.send('No, lemao');
-}} break;
 //bot profile (2) | +
     if(command === 'loc'){
         client.command.get('loc').execute(message, args)
