@@ -164,6 +164,16 @@ if(message.content === 'rpg dynamite'){
         message.reply('**DYNAMITE** is ready!');
         }, 300000);
 }
+//Event ping
+if(message.content.toLowerCase().includes("IT'S RAINING COINS"))
+    message.channel.send("Key Word Detected ");
+else {
+    for(var i = 0; i < message.embeds.length; i++) {
+        if(message.embeds[i].title.includes("IT'S RAINING COINS") || message.embeds[i].title.includes("IT'S RAINING COINS")) {
+            message.channel.send("Detected");
+            break;
+    }
+}}
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
@@ -212,13 +222,16 @@ if(command === 'event'){
 
     if(command === "clear"){
     if(message.member.roles.cache.has('701025360128507945')){
-        if(!args[1]) return message.reply('Error | please specify how many messages you want to delete ```including this message```')
-        message.channel.bulkDelete(args[1]);
+        if(!args[0]) return message.reply('Error | please specify how many messages you want to delete')
+        message.channel.bulkDelete(args[0]);
     
     } else {
     message.channel.send('No, lemao');
-}}
+}} break;
 //bot profile (2) | +
+    if(command === 'loc'){
+        client.command.get('loc').execute(message, args)
+    }
     if(command === 'socials'){
         client.commands.get('socials').execute(message, args)
     }
