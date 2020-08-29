@@ -1,3 +1,8 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+
+
 module.exports = {
     name: 'invite',
     desc: 'sends invite link',
@@ -8,6 +13,6 @@ module.exports = {
         .setTitle("Invite Bot", "https://discordapp.com/oauth2/authorize?client_id=738271385230639216&scope=bot&permissions=8")
         .setColor(0x28B463)
         .setFooter('Verified | 30/07/2020')
-        message.channel.send(inviteembed);
+        message.channel.send(inviteembed).catch(console.error);
     }
 }

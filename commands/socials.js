@@ -1,3 +1,6 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
 module.exports = {
     name: 'socials',
     desc: 'sends socials',
@@ -11,6 +14,6 @@ module.exports = {
         .addField("Feel like supporting this bot? Anything helps", 'https://www.paypal.me/genjiprog')
         .setColor(0x28B463)
         .setFooter('Verified | 30/07/2020')
-        message.channel.send(socialsembed);
+        message.channel.send(socialsembed).catch(console.error);
     }
 }
