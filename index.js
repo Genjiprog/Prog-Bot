@@ -165,11 +165,11 @@ if(message.content === 'rpg dynamite'){
         }, 300000);
 }
 //Event ping
-if(message.content.toLowerCase().includes("IT'S RAINING COINS"))
+if(message.content.toLowerCase().includes("Prog | Information"))
     message.channel.send("Key Word Detected ");
 else {
     for(var i = 0; i < message.embeds.length; i++) {
-        if(message.embeds[i].title.includes("IT'S RAINING COINS") || message.embeds[i].title.includes("IT'S RAINING COINS")) {
+        if(message.embeds[i].title.includes("Prog | Information") || message.embeds[i].title.includes("Prog | Information")) {
             message.channel.send("Detected");
             break;
     }
