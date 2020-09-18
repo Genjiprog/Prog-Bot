@@ -44,7 +44,7 @@ client.once('ready', () =>{
 //If Bot back online, 
 client.login(process.env.token);
 
-//client.login('NzM4MjcxMzg1MjMwNjM5MjE2.XyJezg.JdRYd6KYucs5zqU8j5BL_J6JyJg');
+//client.login('');
 
 client.on('message', async message => {
 
