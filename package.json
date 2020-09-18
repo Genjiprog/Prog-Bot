@@ -9,6 +9,18 @@
   "author": "Genjiprog",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "@discordjs/opus": "^0.3.2",
+    "discord-player": "^2.3.1",
+    "discord-ytdl-core": "^4.0.8",
+    "discord.js": "^12.2.0",
+    "fs": "0.0.1-security",
+    "got": "^11.6.2",
+    "humanize-duration": "^3.23.1",
+    "merge-options": "^3.0.3",
+    "mongoose": "^5.10.2",
+    "node-fetch": "^2.6.1",
+    "spotify-url-info": "^2.0.0",
+    "ytpl": "^1.0.1",
+    "ytsr": "^1.0.1"
   }
 }

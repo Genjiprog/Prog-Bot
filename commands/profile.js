@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-var version = ' 1.1.3';
+var version = ' 1.3.1';
 
 module.exports = {
     name: 'profile',
