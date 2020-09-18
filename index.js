@@ -42,7 +42,7 @@ client.once('ready', () =>{
 });
 
 //If Bot back online, 
-
+client.login(process.env.token);
 
 //client.login('');
 
@@ -201,4 +201,3 @@ client.on('message', async message => {
 }
 //---------------------------------------------------------dont change below       
 })
-client.login(process.env.token);
